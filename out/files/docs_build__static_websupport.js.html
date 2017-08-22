@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>docs/build/_static/websupport.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/api.html">api</a></li>
+                                <li><a href="../classes/Hashes.html">Hashes</a></li>
+                                <li><a href="../classes/Hashes.html">Hashes</a></li>
+                                <li><a href="../classes/Hashes.html">Hashes</a></li>
+                                <li><a href="../classes/Hashes.html">Hashes</a></li>
+                                <li><a href="../classes/Hashes.html">Hashes</a></li>
+                                <li><a href="../classes/Hashes.html">Hashes</a></li>
+                                <li><a href="../classes/Hashes.RMD160.html">Hashes.RMD160</a></li>
+                                <li><a href="../classes/Hashes.SHA256.html">Hashes.SHA256</a></li>
+                                <li><a href="../classes/Hashes.SHA512.html">Hashes.SHA512</a></li>
+                                <li><a href="../classes/.html"></a></li>
+                                <li><a href="../classes/Popper.modifiers.fecha.html">Popper.modifiers.fecha</a></li>
+                                <li><a href="../classes/Popper.modifiers.Hashes.RMD160.html">Popper.modifiers.Hashes.RMD160</a></li>
+                                <li><a href="../classes/Popper.modifiers.Hashes.SHA256.html">Popper.modifiers.Hashes.SHA256</a></li>
+                                <li><a href="../classes/Popper.modifiers.Hashes.SHA512.html">Popper.modifiers.Hashes.SHA512</a></li>
+                                <li><a href="../classes/ReactClass.html">ReactClass</a></li>
+                                <li><a href="../classes/ReactDOMTextComponent.html">ReactDOMTextComponent</a></li>
+                                <li><a href="../classes/ReactMountReady.html">ReactMountReady</a></li>
+                                <li><a href="../classes/ReactMultiChild.html">ReactMultiChild</a></li>
+                                <li><a href="../classes/ReactOwner.html">ReactOwner</a></li>
+                                <li><a href="../classes/ReactPropTransferer.html">ReactPropTransferer</a></li>
+                                <li><a href="../classes/ReactReconcileTransaction.html">ReactReconcileTransaction</a></li>
+                                <li><a href="../classes/ReactServerRenderingTransaction.html">ReactServerRenderingTransaction</a></li>
+                                <li><a href="../classes/ReactShallowRenderer.html">ReactShallowRenderer</a></li>
+                                <li><a href="../classes/ReactTestUtils.html">ReactTestUtils</a></li>
+                                <li><a href="../classes/state.html">state</a></li>
+                                <li><a href="../classes/Transaction.html">Transaction</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/Api.html">Api</a></li>
+                                <li><a href="../modules/Store.html">Store</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: docs/build/_static/websupport.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/*
+ * websupport.js
+ * ~~~~~~~~~~~~~
+ *
+ * sphinx.websupport utilities for all documentation.
+ *
+ * :copyright: Copyright 2007-2017 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+ */
+
+(function($) {
+  $.fn.autogrow = function() {
+    return this.each(function() {
+    var textarea = this;
+
+    $.fn.autogrow.resize(textarea);
+
+    $(textarea)
+      .focus(function() {
+        textarea.interval = setInterval(function() {
+          $.fn.autogrow.resize(textarea);
+        }, 500);
+      })
+      .blur(function() {
+        clearInterval(textarea.interval);
+      });
+    });
+  };
+
+  $.fn.autogrow.resize = function(textarea) {
+    var lineHeight = parseInt($(textarea).css(&#x27;line-height&#x27;), 10);
+    var lines = textarea.value.split(&#x27;\n&#x27;);
+    var columns = textarea.cols;
+    var lineCount = 0;
+    $.each(lines, function() {
+      lineCount += Math.ceil(this.length / columns) || 1;
+    });
+    var height = lineHeight * (lineCount + 1);
+    $(textarea).css(&#x27;height&#x27;, height);
+  };
+})(jQuery);
+
+(function($) {
+  var comp, by;
+
+  function init() {
+    initEvents();
+    initComparator();
+  }
+
+  function initEvents() {
+    $(document).on(&quot;click&quot;, &#x27;a.comment-close&#x27;, function(event) {
+      event.preventDefault();
+      hide($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.vote&#x27;, function(event) {
+      event.preventDefault();
+      handleVote($(this));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.reply&#x27;, function(event) {
+      event.preventDefault();
+      openReply($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.close-reply&#x27;, function(event) {
+      event.preventDefault();
+      closeReply($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.sort-option&#x27;, function(event) {
+      event.preventDefault();
+      handleReSort($(this));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.show-proposal&#x27;, function(event) {
+      event.preventDefault();
+      showProposal($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.hide-proposal&#x27;, function(event) {
+      event.preventDefault();
+      hideProposal($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.show-propose-change&#x27;, function(event) {
+      event.preventDefault();
+      showProposeChange($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.hide-propose-change&#x27;, function(event) {
+      event.preventDefault();
+      hideProposeChange($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.accept-comment&#x27;, function(event) {
+      event.preventDefault();
+      acceptComment($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.delete-comment&#x27;, function(event) {
+      event.preventDefault();
+      deleteComment($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+    $(document).on(&quot;click&quot;, &#x27;a.comment-markup&#x27;, function(event) {
+      event.preventDefault();
+      toggleCommentMarkupBox($(this).attr(&#x27;id&#x27;).substring(2));
+    });
+  }
+
+  /**
+   * Set comp, which is a comparator function used for sorting and
+   * inserting comments into the list.
+   */
+  function setComparator() {
+    // If the first three letters are &quot;asc&quot;, sort in ascending order
+    // and remove the prefix.
+    if (by.substring(0,3) == &#x27;asc&#x27;) {
+      var i = by.substring(3);
+      comp = function(a, b) { return a[i] - b[i]; };
+    } else {
+      // Otherwise sort in descending order.
+      comp = function(a, b) { return b[by] - a[by]; };
+    }
+
+    // Reset link styles and format the selected sort option.
+    $(&#x27;a.sel&#x27;).attr(&#x27;href&#x27;, &#x27;#&#x27;).removeClass(&#x27;sel&#x27;);
+    $(&#x27;a.by&#x27; + by).removeAttr(&#x27;href&#x27;).addClass(&#x27;sel&#x27;);
+  }
+
+  /**
+   * Create a comp function. If the user has preferences stored in
+   * the sortBy cookie, use those, otherwise use the default.
+   */
+  function initComparator() {
+    by = &#x27;rating&#x27;; // Default to sort by rating.
+    // If the sortBy cookie is set, use that instead.
+    if (document.cookie.length &gt; 0) {
+      var start = document.cookie.indexOf(&#x27;sortBy=&#x27;);
+      if (start != -1) {
+        start = start + 7;
+        var end = document.cookie.indexOf(&quot;;&quot;, start);
+        if (end == -1) {
+          end = document.cookie.length;
+          by = unescape(document.cookie.substring(start, end));
+        }
+      }
+    }
+    setComparator();
+  }
+
+  /**
+   * Show a comment div.
+   */
+  function show(id) {
+    $(&#x27;#ao&#x27; + id).hide();
+    $(&#x27;#ah&#x27; + id).show();
+    var context = $.extend({id: id}, opts);
+    var popup = $(renderTemplate(popupTemplate, context)).hide();
+    popup.find(&#x27;textarea[name=&quot;proposal&quot;]&#x27;).hide();
+    popup.find(&#x27;a.by&#x27; + by).addClass(&#x27;sel&#x27;);
+    var form = popup.find(&#x27;#cf&#x27; + id);
+    form.submit(function(event) {
+      event.preventDefault();
+      addComment(form);
+    });
+    $(&#x27;#s&#x27; + id).after(popup);
+    popup.slideDown(&#x27;fast&#x27;, function() {
+      getComments(id);
+    });
+  }
+
+  /**
+   * Hide a comment div.
+   */
+  function hide(id) {
+    $(&#x27;#ah&#x27; + id).hide();
+    $(&#x27;#ao&#x27; + id).show();
+    var div = $(&#x27;#sc&#x27; + id);
+    div.slideUp(&#x27;fast&#x27;, function() {
+      div.remove();
+    });
+  }
+
+  /**
+   * Perform an ajax request to get comments for a node
+   * and insert the comments into the comments tree.
+   */
+  function getComments(id) {
+    $.ajax({
+     type: &#x27;GET&#x27;,
+     url: opts.getCommentsURL,
+     data: {node: id},
+     success: function(data, textStatus, request) {
+       var ul = $(&#x27;#cl&#x27; + id);
+       var speed = 100;
+       $(&#x27;#cf&#x27; + id)
+         .find(&#x27;textarea[name=&quot;proposal&quot;]&#x27;)
+         .data(&#x27;source&#x27;, data.source);
+
+       if (data.comments.length === 0) {
+         ul.html(&#x27;&lt;li&gt;No comments yet.&lt;/li&gt;&#x27;);
+         ul.data(&#x27;empty&#x27;, true);
+       } else {
+         // If there are comments, sort them and put them in the list.
+         var comments = sortComments(data.comments);
+         speed = data.comments.length * 100;
+         appendComments(comments, ul);
+         ul.data(&#x27;empty&#x27;, false);
+       }
+       $(&#x27;#cn&#x27; + id).slideUp(speed + 200);
+       ul.slideDown(speed);
+     },
+     error: function(request, textStatus, error) {
+       showError(&#x27;Oops, there was a problem retrieving the comments.&#x27;);
+     },
+     dataType: &#x27;json&#x27;
+    });
+  }
+
+  /**
+   * Add a comment via ajax and insert the comment into the comment tree.
+   */
+  function addComment(form) {
+    var node_id = form.find(&#x27;input[name=&quot;node&quot;]&#x27;).val();
+    var parent_id = form.find(&#x27;input[name=&quot;parent&quot;]&#x27;).val();
+    var text = form.find(&#x27;textarea[name=&quot;comment&quot;]&#x27;).val();
+    var proposal = form.find(&#x27;textarea[name=&quot;proposal&quot;]&#x27;).val();
+
+    if (text == &#x27;&#x27;) {
+      showError(&#x27;Please enter a comment.&#x27;);
+      return;
+    }
+
+    // Disable the form that is being submitted.
+    form.find(&#x27;textarea,input&#x27;).attr(&#x27;disabled&#x27;, &#x27;disabled&#x27;);
+
+    // Send the comment to the server.
+    $.ajax({
+      type: &quot;POST&quot;,
+      url: opts.addCommentURL,
+      dataType: &#x27;json&#x27;,
+      data: {
+        node: node_id,
+        parent: parent_id,
+        text: text,
+        proposal: proposal
+      },
+      success: function(data, textStatus, error) {
+        // Reset the form.
+        if (node_id) {
+          hideProposeChange(node_id);
+        }
+        form.find(&#x27;textarea&#x27;)
+          .val(&#x27;&#x27;)
+          .add(form.find(&#x27;input&#x27;))
+          .removeAttr(&#x27;disabled&#x27;);
+	var ul = $(&#x27;#cl&#x27; + (node_id || parent_id));
+        if (ul.data(&#x27;empty&#x27;)) {
+          $(ul).empty();
+          ul.data(&#x27;empty&#x27;, false);
+        }
+        insertComment(data.comment);
+        var ao = $(&#x27;#ao&#x27; + node_id);
+        ao.find(&#x27;img&#x27;).attr({&#x27;src&#x27;: opts.commentBrightImage});
+        if (node_id) {
+          // if this was a &quot;root&quot; comment, remove the commenting box
+          // (the user can get it back by reopening the comment popup)
+          $(&#x27;#ca&#x27; + node_id).slideUp();
+        }
+      },
+      error: function(request, textStatus, error) {
+        form.find(&#x27;textarea,input&#x27;).removeAttr(&#x27;disabled&#x27;);
+        showError(&#x27;Oops, there was a problem adding the comment.&#x27;);
+      }
+    });
+  }
+
+  /**
+   * Recursively append comments to the main comment list and children
+   * lists, creating the comment tree.
+   */
+  function appendComments(comments, ul) {
+    $.each(comments, function() {
+      var div = createCommentDiv(this);
+      ul.append($(document.createElement(&#x27;li&#x27;)).html(div));
+      appendComments(this.children, div.find(&#x27;ul.comment-children&#x27;));
+      // To avoid stagnating data, don&#x27;t store the comments children in data.
+      this.children = null;
+      div.data(&#x27;comment&#x27;, this);
+    });
+  }
+
+  /**
+   * After adding a new comment, it must be inserted in the correct
+   * location in the comment tree.
+   */
+  function insertComment(comment) {
+    var div = createCommentDiv(comment);
+
+    // To avoid stagnating data, don&#x27;t store the comments children in data.
+    comment.children = null;
+    div.data(&#x27;comment&#x27;, comment);
+
+    var ul = $(&#x27;#cl&#x27; + (comment.node || comment.parent));
+    var siblings = getChildren(ul);
+
+    var li = $(document.createElement(&#x27;li&#x27;));
+    li.hide();
+
+    // Determine where in the parents children list to insert this comment.
+    for(i=0; i &lt; siblings.length; i++) {
+      if (comp(comment, siblings[i]) &lt;= 0) {
+        $(&#x27;#cd&#x27; + siblings[i].id)
+          .parent()
+          .before(li.html(div));
+        li.slideDown(&#x27;fast&#x27;);
+        return;
+      }
+    }
+
+    // If we get here, this comment rates lower than all the others,
+    // or it is the only comment in the list.
+    ul.append(li.html(div));
+    li.slideDown(&#x27;fast&#x27;);
+  }
+
+  function acceptComment(id) {
+    $.ajax({
+      type: &#x27;POST&#x27;,
+      url: opts.acceptCommentURL,
+      data: {id: id},
+      success: function(data, textStatus, request) {
+        $(&#x27;#cm&#x27; + id).fadeOut(&#x27;fast&#x27;);
+        $(&#x27;#cd&#x27; + id).removeClass(&#x27;moderate&#x27;);
+      },
+      error: function(request, textStatus, error) {
+        showError(&#x27;Oops, there was a problem accepting the comment.&#x27;);
+      }
+    });
+  }
+
+  function deleteComment(id) {
+    $.ajax({
+      type: &#x27;POST&#x27;,
+      url: opts.deleteCommentURL,
+      data: {id: id},
+      success: function(data, textStatus, request) {
+        var div = $(&#x27;#cd&#x27; + id);
+        if (data == &#x27;delete&#x27;) {
+          // Moderator mode: remove the comment and all children immediately
+          div.slideUp(&#x27;fast&#x27;, function() {
+            div.remove();
+          });
+          return;
+        }
+        // User mode: only mark the comment as deleted
+        div
+          .find(&#x27;span.user-id:first&#x27;)
+          .text(&#x27;[deleted]&#x27;).end()
+          .find(&#x27;div.comment-text:first&#x27;)
+          .text(&#x27;[deleted]&#x27;).end()
+          .find(&#x27;#cm&#x27; + id + &#x27;, #dc&#x27; + id + &#x27;, #ac&#x27; + id + &#x27;, #rc&#x27; + id +
+                &#x27;, #sp&#x27; + id + &#x27;, #hp&#x27; + id + &#x27;, #cr&#x27; + id + &#x27;, #rl&#x27; + id)
+          .remove();
+        var comment = div.data(&#x27;comment&#x27;);
+        comment.username = &#x27;[deleted]&#x27;;
+        comment.text = &#x27;[deleted]&#x27;;
+        div.data(&#x27;comment&#x27;, comment);
+      },
+      error: function(request, textStatus, error) {
+        showError(&#x27;Oops, there was a problem deleting the comment.&#x27;);
+      }
+    });
+  }
+
+  function showProposal(id) {
+    $(&#x27;#sp&#x27; + id).hide();
+    $(&#x27;#hp&#x27; + id).show();
+    $(&#x27;#pr&#x27; + id).slideDown(&#x27;fast&#x27;);
+  }
+
+  function hideProposal(id) {
+    $(&#x27;#hp&#x27; + id).hide();
+    $(&#x27;#sp&#x27; + id).show();
+    $(&#x27;#pr&#x27; + id).slideUp(&#x27;fast&#x27;);
+  }
+
+  function showProposeChange(id) {
+    $(&#x27;#pc&#x27; + id).hide();
+    $(&#x27;#hc&#x27; + id).show();
+    var textarea = $(&#x27;#pt&#x27; + id);
+    textarea.val(textarea.data(&#x27;source&#x27;));
+    $.fn.autogrow.resize(textarea[0]);
+    textarea.slideDown(&#x27;fast&#x27;);
+  }
+
+  function hideProposeChange(id) {
+    $(&#x27;#hc&#x27; + id).hide();
+    $(&#x27;#pc&#x27; + id).show();
+    var textarea = $(&#x27;#pt&#x27; + id);
+    textarea.val(&#x27;&#x27;).removeAttr(&#x27;disabled&#x27;);
+    textarea.slideUp(&#x27;fast&#x27;);
+  }
+
+  function toggleCommentMarkupBox(id) {
+    $(&#x27;#mb&#x27; + id).toggle();
+  }
+
+  /** Handle when the user clicks on a sort by link. */
+  function handleReSort(link) {
+    var classes = link.attr(&#x27;class&#x27;).split(/\s+/);
+    for (var i=0; i&lt;classes.length; i++) {
+      if (classes[i] != &#x27;sort-option&#x27;) {
+	by = classes[i].substring(2);
+      }
+    }
+    setComparator();
+    // Save/update the sortBy cookie.
+    var expiration = new Date();
+    expiration.setDate(expiration.getDate() + 365);
+    document.cookie= &#x27;sortBy=&#x27; + escape(by) +
+                     &#x27;;expires=&#x27; + expiration.toUTCString();
+    $(&#x27;ul.comment-ul&#x27;).each(function(index, ul) {
+      var comments = getChildren($(ul), true);
+      comments = sortComments(comments);
+      appendComments(comments, $(ul).empty());
+    });
+  }
+
+  /**
+   * Function to process a vote when a user clicks an arrow.
+   */
+  function handleVote(link) {
+    if (!opts.voting) {
+      showError(&quot;You&#x27;ll need to login to vote.&quot;);
+      return;
+    }
+
+    var id = link.attr(&#x27;id&#x27;);
+    if (!id) {
+      // Didn&#x27;t click on one of the voting arrows.
+      return;
+    }
+    // If it is an unvote, the new vote value is 0,
+    // Otherwise it&#x27;s 1 for an upvote, or -1 for a downvote.
+    var value = 0;
+    if (id.charAt(1) != &#x27;u&#x27;) {
+      value = id.charAt(0) == &#x27;u&#x27; ? 1 : -1;
+    }
+    // The data to be sent to the server.
+    var d = {
+      comment_id: id.substring(2),
+      value: value
+    };
+
+    // Swap the vote and unvote links.
+    link.hide();
+    $(&#x27;#&#x27; + id.charAt(0) + (id.charAt(1) == &#x27;u&#x27; ? &#x27;v&#x27; : &#x27;u&#x27;) + d.comment_id)
+      .show();
+
+    // The div the comment is displayed in.
+    var div = $(&#x27;div#cd&#x27; + d.comment_id);
+    var data = div.data(&#x27;comment&#x27;);
+
+    // If this is not an unvote, and the other vote arrow has
+    // already been pressed, unpress it.
+    if ((d.value !== 0) &amp;&amp; (data.vote === d.value * -1)) {
+      $(&#x27;#&#x27; + (d.value == 1 ? &#x27;d&#x27; : &#x27;u&#x27;) + &#x27;u&#x27; + d.comment_id).hide();
+      $(&#x27;#&#x27; + (d.value == 1 ? &#x27;d&#x27; : &#x27;u&#x27;) + &#x27;v&#x27; + d.comment_id).show();
+    }
+
+    // Update the comments rating in the local data.
+    data.rating += (data.vote === 0) ? d.value : (d.value - data.vote);
+    data.vote = d.value;
+    div.data(&#x27;comment&#x27;, data);
+
+    // Change the rating text.
+    div.find(&#x27;.rating:first&#x27;)
+      .text(data.rating + &#x27; point&#x27; + (data.rating == 1 ? &#x27;&#x27; : &#x27;s&#x27;));
+
+    // Send the vote information to the server.
+    $.ajax({
+      type: &quot;POST&quot;,
+      url: opts.processVoteURL,
+      data: d,
+      error: function(request, textStatus, error) {
+        showError(&#x27;Oops, there was a problem casting that vote.&#x27;);
+      }
+    });
+  }
+
+  /**
+   * Open a reply form used to reply to an existing comment.
+   */
+  function openReply(id) {
+    // Swap out the reply link for the hide link
+    $(&#x27;#rl&#x27; + id).hide();
+    $(&#x27;#cr&#x27; + id).show();
+
+    // Add the reply li to the children ul.
+    var div = $(renderTemplate(replyTemplate, {id: id})).hide();
+    $(&#x27;#cl&#x27; + id)
+      .prepend(div)
+      // Setup the submit handler for the reply form.
+      .find(&#x27;#rf&#x27; + id)
+      .submit(function(event) {
+        event.preventDefault();
+        addComment($(&#x27;#rf&#x27; + id));
+        closeReply(id);
+      })
+      .find(&#x27;input[type=button]&#x27;)
+      .click(function() {
+        closeReply(id);
+      });
+    div.slideDown(&#x27;fast&#x27;, function() {
+      $(&#x27;#rf&#x27; + id).find(&#x27;textarea&#x27;).focus();
+    });
+  }
+
+  /**
+   * Close the reply form opened with openReply.
+   */
+  function closeReply(id) {
+    // Remove the reply div from the DOM.
+    $(&#x27;#rd&#x27; + id).slideUp(&#x27;fast&#x27;, function() {
+      $(this).remove();
+    });
+
+    // Swap out the hide link for the reply link
+    $(&#x27;#cr&#x27; + id).hide();
+    $(&#x27;#rl&#x27; + id).show();
+  }
+
+  /**
+   * Recursively sort a tree of comments using the comp comparator.
+   */
+  function sortComments(comments) {
+    comments.sort(comp);
+    $.each(comments, function() {
+      this.children = sortComments(this.children);
+    });
+    return comments;
+  }
+
+  /**
+   * Get the children comments from a ul. If recursive is true,
+   * recursively include childrens&#x27; children.
+   */
+  function getChildren(ul, recursive) {
+    var children = [];
+    ul.children().children(&quot;[id^=&#x27;cd&#x27;]&quot;)
+      .each(function() {
+        var comment = $(this).data(&#x27;comment&#x27;);
+        if (recursive)
+          comment.children = getChildren($(this).find(&#x27;#cl&#x27; + comment.id), true);
+        children.push(comment);
+      });
+    return children;
+  }
+
+  /** Create a div to display a comment in. */
+  function createCommentDiv(comment) {
+    if (!comment.displayed &amp;&amp; !opts.moderator) {
+      return $(&#x27;&lt;div class=&quot;moderate&quot;&gt;Thank you!  Your comment will show up &#x27;
+               + &#x27;once it is has been approved by a moderator.&lt;/div&gt;&#x27;);
+    }
+    // Prettify the comment rating.
+    comment.pretty_rating = comment.rating + &#x27; point&#x27; +
+      (comment.rating == 1 ? &#x27;&#x27; : &#x27;s&#x27;);
+    // Make a class (for displaying not yet moderated comments differently)
+    comment.css_class = comment.displayed ? &#x27;&#x27; : &#x27; moderate&#x27;;
+    // Create a div for this comment.
+    var context = $.extend({}, opts, comment);
+    var div = $(renderTemplate(commentTemplate, context));
+
+    // If the user has voted on this comment, highlight the correct arrow.
+    if (comment.vote) {
+      var direction = (comment.vote == 1) ? &#x27;u&#x27; : &#x27;d&#x27;;
+      div.find(&#x27;#&#x27; + direction + &#x27;v&#x27; + comment.id).hide();
+      div.find(&#x27;#&#x27; + direction + &#x27;u&#x27; + comment.id).show();
+    }
+
+    if (opts.moderator || comment.text != &#x27;[deleted]&#x27;) {
+      div.find(&#x27;a.reply&#x27;).show();
+      if (comment.proposal_diff)
+        div.find(&#x27;#sp&#x27; + comment.id).show();
+      if (opts.moderator &amp;&amp; !comment.displayed)
+        div.find(&#x27;#cm&#x27; + comment.id).show();
+      if (opts.moderator || (opts.username == comment.username))
+        div.find(&#x27;#dc&#x27; + comment.id).show();
+    }
+    return div;
+  }
+
+  /**
+   * A simple template renderer. Placeholders such as &lt;%id%&gt; are replaced
+   * by context[&#x27;id&#x27;] with items being escaped. Placeholders such as &lt;#id#&gt;
+   * are not escaped.
+   */
+  function renderTemplate(template, context) {
+    var esc = $(document.createElement(&#x27;div&#x27;));
+
+    function handle(ph, escape) {
+      var cur = context;
+      $.each(ph.split(&#x27;.&#x27;), function() {
+        cur = cur[this];
+      });
+      return escape ? esc.text(cur || &quot;&quot;).html() : cur;
+    }
+
+    return template.replace(/&lt;([%#])([\w\.]*)\1&gt;/g, function() {
+      return handle(arguments[2], arguments[1] == &#x27;%&#x27; ? true : false);
+    });
+  }
+
+  /** Flash an error message briefly. */
+  function showError(message) {
+    $(document.createElement(&#x27;div&#x27;)).attr({&#x27;class&#x27;: &#x27;popup-error&#x27;})
+      .append($(document.createElement(&#x27;div&#x27;))
+               .attr({&#x27;class&#x27;: &#x27;error-message&#x27;}).text(message))
+      .appendTo(&#x27;body&#x27;)
+      .fadeIn(&quot;slow&quot;)
+      .delay(2000)
+      .fadeOut(&quot;slow&quot;);
+  }
+
+  /** Add a link the user uses to open the comments popup. */
+  $.fn.comment = function() {
+    return this.each(function() {
+      var id = $(this).attr(&#x27;id&#x27;).substring(1);
+      var count = COMMENT_METADATA[id];
+      var title = count + &#x27; comment&#x27; + (count == 1 ? &#x27;&#x27; : &#x27;s&#x27;);
+      var image = count &gt; 0 ? opts.commentBrightImage : opts.commentImage;
+      var addcls = count == 0 ? &#x27; nocomment&#x27; : &#x27;&#x27;;
+      $(this)
+        .append(
+          $(document.createElement(&#x27;a&#x27;)).attr({
+            href: &#x27;#&#x27;,
+            &#x27;class&#x27;: &#x27;sphinx-comment-open&#x27; + addcls,
+            id: &#x27;ao&#x27; + id
+          })
+            .append($(document.createElement(&#x27;img&#x27;)).attr({
+              src: image,
+              alt: &#x27;comment&#x27;,
+              title: title
+            }))
+            .click(function(event) {
+              event.preventDefault();
+              show($(this).attr(&#x27;id&#x27;).substring(2));
+            })
+        )
+        .append(
+          $(document.createElement(&#x27;a&#x27;)).attr({
+            href: &#x27;#&#x27;,
+            &#x27;class&#x27;: &#x27;sphinx-comment-close hidden&#x27;,
+            id: &#x27;ah&#x27; + id
+          })
+            .append($(document.createElement(&#x27;img&#x27;)).attr({
+              src: opts.closeCommentImage,
+              alt: &#x27;close&#x27;,
+              title: &#x27;close&#x27;
+            }))
+            .click(function(event) {
+              event.preventDefault();
+              hide($(this).attr(&#x27;id&#x27;).substring(2));
+            })
+        );
+    });
+  };
+
+  var opts = {
+    processVoteURL: &#x27;/_process_vote&#x27;,
+    addCommentURL: &#x27;/_add_comment&#x27;,
+    getCommentsURL: &#x27;/_get_comments&#x27;,
+    acceptCommentURL: &#x27;/_accept_comment&#x27;,
+    deleteCommentURL: &#x27;/_delete_comment&#x27;,
+    commentImage: &#x27;/static/_static/comment.png&#x27;,
+    closeCommentImage: &#x27;/static/_static/comment-close.png&#x27;,
+    loadingImage: &#x27;/static/_static/ajax-loader.gif&#x27;,
+    commentBrightImage: &#x27;/static/_static/comment-bright.png&#x27;,
+    upArrow: &#x27;/static/_static/up.png&#x27;,
+    downArrow: &#x27;/static/_static/down.png&#x27;,
+    upArrowPressed: &#x27;/static/_static/up-pressed.png&#x27;,
+    downArrowPressed: &#x27;/static/_static/down-pressed.png&#x27;,
+    voting: false,
+    moderator: false
+  };
+
+  if (typeof COMMENT_OPTIONS != &quot;undefined&quot;) {
+    opts = jQuery.extend(opts, COMMENT_OPTIONS);
+  }
+
+  var popupTemplate = &#x27;\
+    &lt;div class=&quot;sphinx-comments&quot; id=&quot;sc&lt;%id%&gt;&quot;&gt;\
+      &lt;p class=&quot;sort-options&quot;&gt;\
+        Sort by:\
+        &lt;a href=&quot;#&quot; class=&quot;sort-option byrating&quot;&gt;best rated&lt;/a&gt;\
+        &lt;a href=&quot;#&quot; class=&quot;sort-option byascage&quot;&gt;newest&lt;/a&gt;\
+        &lt;a href=&quot;#&quot; class=&quot;sort-option byage&quot;&gt;oldest&lt;/a&gt;\
+      &lt;/p&gt;\
+      &lt;div class=&quot;comment-header&quot;&gt;Comments&lt;/div&gt;\
+      &lt;div class=&quot;comment-loading&quot; id=&quot;cn&lt;%id%&gt;&quot;&gt;\
+        loading comments... &lt;img src=&quot;&lt;%loadingImage%&gt;&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;\
+      &lt;ul id=&quot;cl&lt;%id%&gt;&quot; class=&quot;comment-ul&quot;&gt;&lt;/ul&gt;\
+      &lt;div id=&quot;ca&lt;%id%&gt;&quot;&gt;\
+      &lt;p class=&quot;add-a-comment&quot;&gt;Add a comment\
+        (&lt;a href=&quot;#&quot; class=&quot;comment-markup&quot; id=&quot;ab&lt;%id%&gt;&quot;&gt;markup&lt;/a&gt;):&lt;/p&gt;\
+      &lt;div class=&quot;comment-markup-box&quot; id=&quot;mb&lt;%id%&gt;&quot;&gt;\
+        reStructured text markup: &lt;i&gt;*emph*&lt;/i&gt;, &lt;b&gt;**strong**&lt;/b&gt;, \
+        &lt;code&gt;&#x60;&#x60;code&#x60;&#x60;&lt;/code&gt;, \
+        code blocks: &lt;code&gt;::&lt;/code&gt; and an indented block after blank line&lt;/div&gt;\
+      &lt;form method=&quot;post&quot; id=&quot;cf&lt;%id%&gt;&quot; class=&quot;comment-form&quot; action=&quot;&quot;&gt;\
+        &lt;textarea name=&quot;comment&quot; cols=&quot;80&quot;&gt;&lt;/textarea&gt;\
+        &lt;p class=&quot;propose-button&quot;&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;pc&lt;%id%&gt;&quot; class=&quot;show-propose-change&quot;&gt;\
+            Propose a change &amp;#9657;\
+          &lt;/a&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;hc&lt;%id%&gt;&quot; class=&quot;hide-propose-change&quot;&gt;\
+            Propose a change &amp;#9663;\
+          &lt;/a&gt;\
+        &lt;/p&gt;\
+        &lt;textarea name=&quot;proposal&quot; id=&quot;pt&lt;%id%&gt;&quot; cols=&quot;80&quot;\
+                  spellcheck=&quot;false&quot;&gt;&lt;/textarea&gt;\
+        &lt;input type=&quot;submit&quot; value=&quot;Add comment&quot; /&gt;\
+        &lt;input type=&quot;hidden&quot; name=&quot;node&quot; value=&quot;&lt;%id%&gt;&quot; /&gt;\
+        &lt;input type=&quot;hidden&quot; name=&quot;parent&quot; value=&quot;&quot; /&gt;\
+      &lt;/form&gt;\
+      &lt;/div&gt;\
+    &lt;/div&gt;&#x27;;
+
+  var commentTemplate = &#x27;\
+    &lt;div id=&quot;cd&lt;%id%&gt;&quot; class=&quot;sphinx-comment&lt;%css_class%&gt;&quot;&gt;\
+      &lt;div class=&quot;vote&quot;&gt;\
+        &lt;div class=&quot;arrow&quot;&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;uv&lt;%id%&gt;&quot; class=&quot;vote&quot; title=&quot;vote up&quot;&gt;\
+            &lt;img src=&quot;&lt;%upArrow%&gt;&quot; /&gt;\
+          &lt;/a&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;uu&lt;%id%&gt;&quot; class=&quot;un vote&quot; title=&quot;vote up&quot;&gt;\
+            &lt;img src=&quot;&lt;%upArrowPressed%&gt;&quot; /&gt;\
+          &lt;/a&gt;\
+        &lt;/div&gt;\
+        &lt;div class=&quot;arrow&quot;&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;dv&lt;%id%&gt;&quot; class=&quot;vote&quot; title=&quot;vote down&quot;&gt;\
+            &lt;img src=&quot;&lt;%downArrow%&gt;&quot; id=&quot;da&lt;%id%&gt;&quot; /&gt;\
+          &lt;/a&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;du&lt;%id%&gt;&quot; class=&quot;un vote&quot; title=&quot;vote down&quot;&gt;\
+            &lt;img src=&quot;&lt;%downArrowPressed%&gt;&quot; /&gt;\
+          &lt;/a&gt;\
+        &lt;/div&gt;\
+      &lt;/div&gt;\
+      &lt;div class=&quot;comment-content&quot;&gt;\
+        &lt;p class=&quot;tagline comment&quot;&gt;\
+          &lt;span class=&quot;user-id&quot;&gt;&lt;%username%&gt;&lt;/span&gt;\
+          &lt;span class=&quot;rating&quot;&gt;&lt;%pretty_rating%&gt;&lt;/span&gt;\
+          &lt;span class=&quot;delta&quot;&gt;&lt;%time.delta%&gt;&lt;/span&gt;\
+        &lt;/p&gt;\
+        &lt;div class=&quot;comment-text comment&quot;&gt;&lt;#text#&gt;&lt;/div&gt;\
+        &lt;p class=&quot;comment-opts comment&quot;&gt;\
+          &lt;a href=&quot;#&quot; class=&quot;reply hidden&quot; id=&quot;rl&lt;%id%&gt;&quot;&gt;reply &amp;#9657;&lt;/a&gt;\
+          &lt;a href=&quot;#&quot; class=&quot;close-reply&quot; id=&quot;cr&lt;%id%&gt;&quot;&gt;reply &amp;#9663;&lt;/a&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;sp&lt;%id%&gt;&quot; class=&quot;show-proposal&quot;&gt;proposal &amp;#9657;&lt;/a&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;hp&lt;%id%&gt;&quot; class=&quot;hide-proposal&quot;&gt;proposal &amp;#9663;&lt;/a&gt;\
+          &lt;a href=&quot;#&quot; id=&quot;dc&lt;%id%&gt;&quot; class=&quot;delete-comment hidden&quot;&gt;delete&lt;/a&gt;\
+          &lt;span id=&quot;cm&lt;%id%&gt;&quot; class=&quot;moderation hidden&quot;&gt;\
+            &lt;a href=&quot;#&quot; id=&quot;ac&lt;%id%&gt;&quot; class=&quot;accept-comment&quot;&gt;accept&lt;/a&gt;\
+          &lt;/span&gt;\
+        &lt;/p&gt;\
+        &lt;pre class=&quot;proposal&quot; id=&quot;pr&lt;%id%&gt;&quot;&gt;\
+&lt;#proposal_diff#&gt;\
+        &lt;/pre&gt;\
+          &lt;ul class=&quot;comment-children&quot; id=&quot;cl&lt;%id%&gt;&quot;&gt;&lt;/ul&gt;\
+        &lt;/div&gt;\
+        &lt;div class=&quot;clearleft&quot;&gt;&lt;/div&gt;\
+      &lt;/div&gt;\
+    &lt;/div&gt;&#x27;;
+
+  var replyTemplate = &#x27;\
+    &lt;li&gt;\
+      &lt;div class=&quot;reply-div&quot; id=&quot;rd&lt;%id%&gt;&quot;&gt;\
+        &lt;form id=&quot;rf&lt;%id%&gt;&quot;&gt;\
+          &lt;textarea name=&quot;comment&quot; cols=&quot;80&quot;&gt;&lt;/textarea&gt;\
+          &lt;input type=&quot;submit&quot; value=&quot;Add reply&quot; /&gt;\
+          &lt;input type=&quot;button&quot; value=&quot;Cancel&quot; /&gt;\
+          &lt;input type=&quot;hidden&quot; name=&quot;parent&quot; value=&quot;&lt;%id%&gt;&quot; /&gt;\
+          &lt;input type=&quot;hidden&quot; name=&quot;node&quot; value=&quot;&quot; /&gt;\
+        &lt;/form&gt;\
+      &lt;/div&gt;\
+    &lt;/li&gt;&#x27;;
+
+  $(document).ready(function() {
+    init();
+  });
+})(jQuery);
+
+$(document).ready(function() {
+  // add comment anchors for all paragraphs that are commentable
+  $(&#x27;.sphinx-has-comment&#x27;).comment();
+
+  // highlight search words in search results
+  $(&quot;div.context&quot;).each(function() {
+    var params = $.getQueryParameters();
+    var terms = (params.q) ? params.q[0].split(/\s+/) : [];
+    var result = $(this);
+    $.each(terms, function() {
+      result.highlightText(this.toLowerCase(), &#x27;highlighted&#x27;);
+    });
+  });
+
+  // directly open comment window if requested
+  var anchor = document.location.hash;
+  if (anchor.substring(0, 9) == &#x27;#comment-&#x27;) {
+    $(&#x27;#ao&#x27; + anchor.substring(9)).click();
+    document.location.hash = &#x27;#s&#x27; + anchor.substring(9);
+  }
+});
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
