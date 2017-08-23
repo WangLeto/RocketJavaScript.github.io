@@ -2,9 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3628a79-e703-4a39-abd4-07efb2ac1700" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Popper.modifiers.fecha.html" afterPath="$PROJECT_DIR$/classes/Popper.modifiers.fecha.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_js_vendor.js.html" afterPath="$PROJECT_DIR$/files/dist_static_js_vendor.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/static_jquery-ui.js.html" afterPath="$PROJECT_DIR$/files/static_jquery-ui.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Hashes.RMD160.html" afterPath="$PROJECT_DIR$/classes/Hashes.RMD160.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Hashes.SHA256.html" afterPath="$PROJECT_DIR$/classes/Hashes.SHA256.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Hashes.SHA512.html" afterPath="$PROJECT_DIR$/classes/Hashes.SHA512.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Hashes.html" afterPath="$PROJECT_DIR$/classes/Hashes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Popper.modifiers.Hashes.RMD160.html" afterPath="$PROJECT_DIR$/classes/Popper.modifiers.Hashes.RMD160.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Popper.modifiers.Hashes.SHA256.html" afterPath="$PROJECT_DIR$/classes/Popper.modifiers.Hashes.SHA256.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Popper.modifiers.Hashes.SHA512.html" afterPath="$PROJECT_DIR$/classes/Popper.modifiers.Hashes.SHA512.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactClass.html" afterPath="$PROJECT_DIR$/classes/ReactClass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactDOMTextComponent.html" afterPath="$PROJECT_DIR$/classes/ReactDOMTextComponent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactMountReady.html" afterPath="$PROJECT_DIR$/classes/ReactMountReady.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactMultiChild.html" afterPath="$PROJECT_DIR$/classes/ReactMultiChild.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactOwner.html" afterPath="$PROJECT_DIR$/classes/ReactOwner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactPropTransferer.html" afterPath="$PROJECT_DIR$/classes/ReactPropTransferer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactReconcileTransaction.html" afterPath="$PROJECT_DIR$/classes/ReactReconcileTransaction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactServerRenderingTransaction.html" afterPath="$PROJECT_DIR$/classes/ReactServerRenderingTransaction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactShallowRenderer.html" afterPath="$PROJECT_DIR$/classes/ReactShallowRenderer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/ReactTestUtils.html" afterPath="$PROJECT_DIR$/classes/ReactTestUtils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Transaction.html" afterPath="$PROJECT_DIR$/classes/Transaction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/api.html" afterPath="$PROJECT_DIR$/classes/api.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/state.html" afterPath="$PROJECT_DIR$/classes/state.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/undefined.html" afterPath="$PROJECT_DIR$/classes/undefined.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_174f9d6f794a46714eaf.worker.js.html" afterPath="$PROJECT_DIR$/files/dist_174f9d6f794a46714eaf.worker.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_RecordRTC.js.html" afterPath="$PROJECT_DIR$/files/dist_static_RecordRTC.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_canvas__js_libs_literallycanvas.js.html" afterPath="$PROJECT_DIR$/files/dist_static_canvas__js_libs_literallycanvas.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_canvas__js_libs_react-0.14.3.js.html" afterPath="$PROJECT_DIR$/files/dist_static_canvas__js_libs_react-0.14.3.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_hash.js.html" afterPath="$PROJECT_DIR$/files/dist_static_hash.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_jquery-1.10.2.js.html" afterPath="$PROJECT_DIR$/files/dist_static_jquery-1.10.2.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_jquery-ui.js.html" afterPath="$PROJECT_DIR$/files/dist_static_jquery-ui.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_js_0.js.html" afterPath="$PROJECT_DIR$/files/dist_static_js_0.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_js_app.js.html" afterPath="$PROJECT_DIR$/files/dist_static_js_app.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/dist_static_js_manifest.js.html" afterPath="$PROJECT_DIR$/files/dist_static_js_manifest.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/docs_build__static_doctools.js.html" afterPath="$PROJECT_DIR$/files/docs_build__static_doctools.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/docs_build__static_jquery-3.1.0.js.html" afterPath="$PROJECT_DIR$/files/docs_build__static_jquery-3.1.0.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/docs_build__static_searchtools.js.html" afterPath="$PROJECT_DIR$/files/docs_build__static_searchtools.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/docs_build__static_websupport.js.html" afterPath="$PROJECT_DIR$/files/docs_build__static_websupport.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/docs_sw.js.html" afterPath="$PROJECT_DIR$/files/docs_sw.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/lib_socket.io.js.html" afterPath="$PROJECT_DIR$/files/lib_socket.io.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/src_store_api.js.html" afterPath="$PROJECT_DIR$/files/src_store_api.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/src_store_store.js.html" afterPath="$PROJECT_DIR$/files/src_store_store.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/static_RecordRTC.js.html" afterPath="$PROJECT_DIR$/files/static_RecordRTC.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/static_canvas__js_libs_literallycanvas.js.html" afterPath="$PROJECT_DIR$/files/static_canvas__js_libs_literallycanvas.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/static_canvas__js_libs_react-0.14.3.js.html" afterPath="$PROJECT_DIR$/files/static_canvas__js_libs_react-0.14.3.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/static_hash.js.html" afterPath="$PROJECT_DIR$/files/static_hash.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/test_util.js.html" afterPath="$PROJECT_DIR$/files/test_util.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/Api.html" afterPath="$PROJECT_DIR$/modules/Api.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/Store.html" afterPath="$PROJECT_DIR$/modules/Store.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,38 +62,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="static_jquery-ui.js.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/files/static_jquery-ui.js.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="74" lean-forward="true" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Popper.modifiers.fecha.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/Popper.modifiers.fecha.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dist_static_js_vendor.js.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/files/dist_static_js_vendor.js.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -58,15 +71,19 @@
       <find>../static/</find>
       <find>http:</find>
       <find>http://</find>
+      <find>http://yui.yahooapis.com/combo?3.9.1/build/oop/oop-min.js&amp;3.9.1/build/event-custom-base/event-custom-base-min.js&amp;3.9.1/build/dom-core/dom-core-min.js&amp;3.9.1/build/dom-base/dom-base-min.js&amp;3.9.1/build/selector-native/selector-native-min.js&amp;3.9.1/build/selector/selector-min.js&amp;3.9.1/build/node-core/node-core-min.js&amp;3.9.1/build/node-base/node-base-min.js&amp;3.9.1/build/event-base/event-base-min.js&amp;3.9.1/build/event-delegate/event-delegate-min.js&amp;3.9.1/build/node-event-delegate/node-event-delegate-min.js&amp;3.9.1/build/pluginhost-base/pluginhost-base-min.js&amp;3.9.1/build/pluginhost-config/pluginhost-config-min.js&amp;3.9.1/build/node-pluginhost/node-pluginhost-min.js&amp;3.9.1/build/dom-style/dom-style-min.js&amp;3.9.1/build/dom-screen/dom-screen-min.js&amp;3.9.1/build/node-screen/node-screen-min.js&amp;3.9.1/build/node-style/node-style-min.js</find>
+      <find>http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css</find>
+      <find>http://yui.yahooapis.com/3.9.1/build/cssgrids</find>
     </findStrings>
     <replaceStrings>
       <replace>../static</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>D:\docs\RocketJavaScript.github.io\classes</dir>
       <dir>D:\docs\RocketJavaScript.github.io\</dir>
-      <dir>D:\docs\RocketJavaScript.github.io\files</dir>
       <dir>D:\docs\RocketJavaScript.github.io\static</dir>
+      <dir>D:\docs\RocketJavaScript.github.io\classes</dir>
+      <dir>D:\docs\RocketJavaScript.github.io\files</dir>
+      <dir>D:\docs\RocketJavaScript.github.io\modules</dir>
       <dir>D:\docs\RocketJavaScript.github.io</dir>
     </dirStrings>
   </component>
@@ -76,18 +93,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/classes/ReactMultiChild.html" />
         <option value="$PROJECT_DIR$/classes/Popper.modifiers.Hashes.RMD160.html" />
-        <option value="$PROJECT_DIR$/classes/Hashes.RMD160.html" />
         <option value="$PROJECT_DIR$/classes/Hashes.SHA256.html" />
-        <option value="$PROJECT_DIR$/files/dist_174f9d6f794a46714eaf.worker.js.html" />
-        <option value="$PROJECT_DIR$/modules/Api.html" />
         <option value="$PROJECT_DIR$/modules/Store.html" />
         <option value="$PROJECT_DIR$/files/static_jquery-1.10.2.js.html" />
         <option value="$PROJECT_DIR$/files/static_jquery-ui.js.html" />
         <option value="$PROJECT_DIR$/classes/Popper.modifiers.fecha.html" />
         <option value="$PROJECT_DIR$/files/dist_static_js_vendor.js.html" />
+        <option value="$PROJECT_DIR$/classes/Hashes.RMD160.html" />
+        <option value="$PROJECT_DIR$/files/dist_174f9d6f794a46714eaf.worker.js.html" />
+        <option value="$PROJECT_DIR$/modules/Api.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -189,16 +206,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1503488712461</updated>
-      <workItem from="1503488714132" duration="991000" />
+      <workItem from="1503488714132" duration="1237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="991000" />
+    <option name="totallyTimeSpent" value="1237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -206,9 +222,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -256,34 +272,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Hashes.RMD160.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Hashes.SHA256.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
           <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/dist_174f9d6f794a46714eaf.worker.js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Api.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -336,18 +328,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/files/dist_static_js_vendor.js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/files/static_jquery-ui.js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="74" lean-forward="true" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+        <state relative-caret-position="136">
+          <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -360,10 +344,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/dist_static_js_vendor.js.html">
+    <entry file="file://$PROJECT_DIR$/files/static_jquery-ui.js.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="74" lean-forward="true" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Hashes.RMD160.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/dist_174f9d6f794a46714eaf.worker.js.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Api.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
           <folding />
         </state>
       </provider>
